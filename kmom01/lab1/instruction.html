@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 1 - oopython</title>
+<style>
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+<pre>
+7adb9ab377fc4a858832c70893858950
+oopython
+lab1
+emmd12
+2017-01-24 13:30:18
+v2.2.26 (2017-01-20)
+</pre>
+
+<p><i>Generated 2017-01-24 14:30:18 by <a href="https://github.com/mosbth/lab">dbwebb lab-utility</a> v2.2.26 (2017-01-20).</i></p>
+<hr>
+
+<h1>Lab 1 - oopython</h1>
+<p>If you need to peek at examples or just want to know more, take a look at the <a href="https://docs.python.org/3/library/index.html">Python documentation</a>. Here you will find everything this lab will go through and much more.</p>
+
+
+<h2>1. Objects and classes</h2>
+<p>Basic object oriented python.</p>
+
+
+<h3>Exercise 1.1</h3>
+<p>Create a class called Cat in a new file. Give the Cat the attributes <code>eyeColor</code> and <code>name</code> in the constructor.</p>
+
+<p>Dont forget to import the file.</p>
+
+<p>In the code below initiate a variable named <code>cat</code> with a <em>Cat object</em>, give it eye color &#8220;blue&#8221; and name &#8220;Basion&#8221;.</p>
+
+<p>Answer with the string &#8220;My cats name is <code>name</code> and has <code>eyeColor</code> eyes.&#8221;.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2</h3>
+<p>Expand your Cat class with the variables <code>livesLeft</code>.</p>
+
+<p>Initialize the attribute in the constructor to <code>-1</code>. In the code below change the value to <code>9</code>.</p>
+
+<p>Answer with number of lives the cat has left.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3</h3>
+<p>Create a new function in the Cat class, called <code>description()</code>, that returns the string &#8220;My cats name is <code>name</code>, has <code>color</code> eyes and <code>livesLeft</code> lives left to live.&#8221;.</p>
+
+<p>Answer with the result returned from the function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4</h3>
+<p>Create a new class named Dog, it should look the same as the Cat class. But in the description function it should print &#8220;My dogs name&#8230;&#8221; instead of &#8220;My cats name&#8230;&#8221;.</p>
+
+<p>In the constructor set lives left to live to <code>1</code>. Dont forget to import the new class.
+Initiate a new variable called <code>dog</code> with the <em>Dog class</em>, give dog the name &#8220;Lilly&#8221; and eye color &#8220;blue&#8221;.</p>
+
+<p>Put cat and dog variables in a list. Iterate through the list and put their descriptions together in a string without any seperation between the two.</p>
+
+<p>Answer with the string.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5</h3>
+<p>Create a private variable for the Cat class called <code>evil</code>.<br />
+In the constructor the variable should be set to <code>True</code> by default if no argument is given.</p>
+
+<p>Create a function in the class that returns if the cat is evil or not.</p>
+
+<p>Answer with if the cat is evil or not.</p>
+
+
+
+
+
+
+<h3>Exercise 1.6</h3>
+<p>In the code below create a function that takes a Cat object as an argument. If attribute <code>evil</code> for Cat is true, return &#8220;All cats are evil!&#8221; otherwise return &#8220;This cat is not evil!&#8221;.</p>
+
+<p>Answer with the returned string.</p>
+
+
+
+
+
+
+<h3>Exercise 1.7</h3>
+<p>Create a static variable in the Cat class that contains the number of paws a cat have. Set its value to <code>4</code> in the declaration.</p>
+
+<p>Answer with the string &#8220;<code>Basion</code> has <code>4</code> paws.&#8221;</p>
+
+
+
+
+
+
+<h3>Exercise 1.8</h3>
+<p>In the code below assign the number of paws variable for <code>cat</code> to <code>3</code>.</p>
+
+<p>Answer with the string &#8220;<code>Basion</code> has <code>3</code> paws but cats have <code>&lt;Cat.nrOfpaws&gt;</code> paws.&#8221;.</p>
+
+
+
+
+
+
+
+<h2>2. Inheritance</h2>
+
+
+
+<h3>Exercise 2.1</h3>
+<p>Create a new class, Animal, that will act as a <em>parent</em> to Cat and Dog.<br />
+The Animal class shall contain the attributes <code>name</code> and <code>eyeColor</code> instead of the Cat and Dog classes.<br />
+Rewrite Dog and Cat so that they inherit from Animal.</p>
+
+<p>Answer with the description from <code>cat</code> and <code>dog</code>, seperated with space.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2</h3>
+<p>Create a new function in Animal named <code>speak</code>, <em>force</em> child classes to override it.</p>
+
+<p>Overwrite it in Dog and Cat. In dog return &#8220;Voff&#8221; and in cat &#8220;Meow&#8221;.</p>
+
+<p>Create another function in Animal called <code>speakTwice</code>. It should return a string where <code>self.speak</code> is called twice, with space as seperation between the two.</p>
+
+<p>Answer with <code>speakTwice</code> for cat.</p>
+
+
+
+
+
+
+<h3>Exercise 2.3</h3>
+<p>Create a static method in Dog called <code>interact</code>. Its input parameter should be an object.
+If the argument is of class Cat return the string &#8220;Chase!&#8221; otherwise return &#8220;Lick!&#8221;.</p>
+
+<p>Answer with dog interact function and pass cat as argument.</p>
+
+
+
+
+
+
+
+<h2>3. Overriding methods</h2>
+
+
+
+<h3>Exercise 3.1</h3>
+<p>Create a new class called BankAccount.</p>
+
+<p>Declare the attributes <code>balance</code> and <code>owner</code> in the constructor. <code>owner</code> should be a private attribute.</p>
+
+<p>The constructor should take the name for the owner as argument. Balance should be initalized to <code>113</code> in the constructor.</p>
+
+<p>BankAccount should also have four functions: <code>accountInfo</code> <code>getBalance</code>, <code>depositMoney</code> and <code>withdrawMoney</code>.<br />
+accountInfo returns &#8220;<code>Misty</code> has <code>191</code> kr&#8221;.<br />
+getBalance returns the balance.<br />
+depositMoney takes one argument, <code>amount</code>, and adds the amount to the balance.<br />
+withdrawMoney draws the <code>amount</code> of money sent as an argument from balance.</p>
+
+<p>In the code below create a function, where you create a <em>new instance of the class BankAccount</em>, the function should take the <code>owner</code> name as argument, and return the created object.</p>
+
+<p>Create a new variable called <code>bankAccount1</code> and initialize it with the create bank account function, name the owner &#8220;Misty&#8221;.<br />
+Deposit <code>78</code> kr to the account and answer with the <code>accountInfo</code> function.</p>
+
+
+
+
+
+
+<h3>Exercise 3.2</h3>
+<p>Overload the <em>add(+)</em> function for the BankAccount class. The function should be able to sum the balance of two bank accounts (BankAccount + BankAccount) and BankAccount + an int.</p>
+
+<p>Initiate a new BankAccount called <code>bankAccount2</code> with the owner &#8220;Misha&#8221; and withdraw <code>52</code> kr from it.</p>
+
+<p>Answer with <code>bankAccount1 + bankAccount2</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 3.3</h3>
+<p>Overload the <em>iadd(+=)</em> function for the BankAccount class. The function should be able to add two bank accounts together (BankAccount += BankAccount) and BankAccount += an int.</p>
+
+<p>Update <code>bankAccount1</code> with <code>bankAccount1 += bankAccount2</code>.</p>
+
+<p>Answer with <code>accountInfo</code> for bankAccount1.</p>
+
+
+
+
+
+
+<h3>Exercise 3.4</h3>
+<p>If you look in the <code>iadd</code> and <code>add</code> functions for BankAccount you should be using basically the same code in both functions.<br />
+To minize code size of the class, create a private function where you do the shared calculations and then call it from <code>iadd</code> and <code>add</code>.</p>
+
+<p>calculate <code>bankAccount2 += bankAccount1 + 5</code>.</p>
+
+<p>Answer with bankAccount2.accountInfo()</p>
+
+
+
+
+
+
+
+<hr>
+<code>7adb9ab377fc4a858832c70893858950</code>
+
+</body>
+</html>

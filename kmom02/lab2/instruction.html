@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 2 - oopython</title>
+<style>
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+<pre>
+3d7bb02eba6523a17df5a35ac2f6a1c1
+oopython
+lab2
+emmd12
+2017-02-04 16:47:34
+v2.2.28* (2017-02-01)
+</pre>
+
+<p><i>Generated 2017-02-04 17:47:34 by <a href="https://github.com/mosbth/lab">dbwebb lab-utility</a> v2.2.28* (2017-02-01).</i></p>
+<hr>
+
+<h1>Lab 2 - oopython</h1>
+
+
+
+<h2>1. More classes</h2>
+<p>Practice more on creating classes in python.</p>
+
+
+<h3>Exercise 1.1</h3>
+<p>Create a new class named Date.<br />
+Declare the variables <code>year</code>, <code>month</code> and <code>day</code> in the constructor.<br />
+Give it a <code>info</code> method that returns a date as a string with the format &#8220;year-mm-dd&#8221;. Numbers below 10 should have a leading zero when printed in the info method.</p>
+
+<p>Initialize a new variable called <code>date1</code> which contains a <em>Date object</em>, give it year <code>2005</code>, month <code>1</code> and day <code>4</code>.</p>
+
+<p>Answer with the result from the info method.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2</h3>
+<p>Overload the <code>smaller than method(&lt;)</code> in the Date class.<br />
+It should return True if date comes before the other.</p>
+
+<p>Initialize a new Date variable called <code>date2</code> , give it year <code>2000</code>, month <code>11</code> and day <code>26</code>.</p>
+
+<p>Answer with <code>date1&lt;date2</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3</h3>
+<p>For the next few exercises we will work on a dog kennel, we will have three classes when we are done, <em>Dog</em>, <em>DogType</em> and <em>Kennel</em>.</p>
+
+<p>Create a new class called Dog. Declare the variables <code>name</code>, <code>size</code>, <code>race</code> and numberOfDays (to stay at kennel) in the constructor.<br />
+Give it a method that returns a string of its information in the format &#8220;name: xxx, size: ccc, race: fff, nrOfDays: 000&#8221;.</p>
+
+<p>In the code below initialize a new Dog variable calle <code>dog1</code>, give it the name &#8220;Buster&#8221;, the size &#8220;small&#8221;, the race &#8220;Shitzu&#8221; and <code>6</code> days to stay.</p>
+
+<p>Answer with the info method of <code>dog1</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4</h3>
+<p>The next class that you will create will hold dogs of a certain type. Eg. small, medium or big sized.</p>
+
+<p>Create a new class called DogType. In the constructor declare the variables <code>size</code>, <code>cost</code> (per day), <code>numberOfAllowedDogs</code> and a private list that will contain <em>Dog objects</em>. Declare the list containing <code>Dogs</code> to an empty list in the constructor.<br />
+Give the class a new method called <code>addDog</code>, it should take a Dog object as parameter. In the method add the Dog to the list if you have room for it and it has the correct size. If you add the dog return <code>True</code> otherwise return <code>False</code>.</p>
+
+<p>Initialize a new DogType variable in the code below, name it <code>smallDogs</code>, set <code>size</code> to &#8220;small&#8221;, <code>cost</code> to <code>109</code> and <code>numberOfAllowedDogs</code> to <code>3</code>. 
+Use the add method to add dog1.</p>
+
+<p>Answer with the result from adding <code>dog1</code> to <code>smallDogs</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5</h3>
+<p>In the DogType class create a new method called <code>retrieveDog</code>, take a <code>name</code> as parameter. If the dogs name is the same as a dog  in the list remove it from the list and return the object, otherwise return <code>False</code>.</p>
+
+<p>In the code below retrieve &#8220;Buster&#8221; from <code>smallDogs</code>.</p>
+
+<p>Answer with the returned Dogs number of days stayed.</p>
+
+
+
+
+
+
+<h3>Exercise 1.6</h3>
+<p>Time to make the Kennel class. Choose a way to store three <em>DogType objects</em>, a list, a dictionary or one variable for each. We will have the dog types <code>small</code>, <code>medium</code> and <code>big</code> dogs.<br />
+In the constructor:<br />
+Initialize the DogType for small dogs with size &#8220;small&#8221;, cost <code>109</code> and numberOfAllowedDogs <code>3</code>.<br />
+Initialize the DogType for medium dogs with size <code>medium</code>, cost <code>125</code> and numberOfAllowedDogs <code>2</code>.<br />
+Initialize the DogType for big dogs with size <code>big</code>, cost <code>172</code> and numberOfAllowedDogs <code>1</code>.</p>
+
+<p>Create a method in Kennel that checks-in a new dog at the Kennel, it takes a <em>Dog object</em> as parameter. In the method add the dog to the appropriate DogType and return whats returned from the DogType <code>addDog</code> method.</p>
+
+<p>In the code below initialize a new Kennel variable and check-in <code>dog1</code> to the kennel.</p>
+
+<p>Answer with the result from the check-in.</p>
+
+
+
+
+
+
+<h3>Exercise 1.7</h3>
+<p>Create a new method in the kennel class for checking out a Dog. It takes a <code>name</code> and <code>size</code> as parameter.<br />
+In the method try to retrieve the dog from appropriate DogType with the DogType method <code>retrieveDog</code>. The check out method should return the <code>cost</code> for having the dog at the Kennel, aka days stayed * cost of size.</p>
+
+<p>In the code below create a new Dog variable called <code>dog2</code>, give it the name &#8220;Zimba&#8221;, the size &#8220;big&#8221;, the race &#8220;Rottweiler&#8221; and <code>10</code> days to stay.<br />
+Check-in <code>dog2</code> at the kennel and checkout <code>dog1</code>, &#8220;Buster&#8221;, &#8220;small&#8221;, from the Kennel.</p>
+
+<p>Answer with the price of having <code>dog1</code> at the Kennel, the result from the check out method.</p>
+
+
+
+
+
+
+<h3>Exercise 1.8</h3>
+<p>Create a class named Present.<br />
+Declare the variables <code>content</code> and <code>recipient</code> in the constructor.<br />
+Give it a <code>info</code> method where you return &#8220;content: xxx, recipient: yyy&#8221;.</p>
+
+<p>Initialize a new Present variable in the code below named <code>present</code>. Give it the content &#8220;Ozelot&#8221;, recipient &#8220;Kvothe&#8221;.</p>
+
+<p>Answer with the result from the <code>info</code> method.</p>
+
+
+
+
+
+
+<h3>Exercise 1.9</h3>
+<p>Create a new class called ChristmasPresent it should <em>inherit from Present</em>.<br />
+Give ChristmasPresent the variale <code>rhyme</code>. Use <em>super</em> to initiate the variables from the parent class (Present) with <code>content</code> and <code>recipient</code> from the constructor.</p>
+
+<p>Override the <code>info</code> method from Present to return &#8220;content: xxx, recipient: yyy, rhyme: zzz&#8221;. A tip, you can access the parent method with super and just add rhyme to the returned string and return that.</p>
+
+<p>Create a new ChristmasPresent variable in the code below. Give it the content &#8220;Pirate&#8221;, recipient &#8220;Zeldah&#8221; and rhyme &#8220;You, oh, oh, a Christmas. My Christmas tree is delicious&#8221;.</p>
+
+<p>Answer with the christmas presents <code>info</code> method.</p>
+
+
+
+
+
+
+<h3>Exercise 1.10</h3>
+<p>Create a new class called CompanyPresent it should <em>inherit from Present</em>.<br />
+Give CompanyPresent the variale <code>Cost</code>. Use &#8220;super&#8221; to initiate the variables from the parent class (Present) with content and recipient from the constructor.</p>
+
+<p>Override the <code>info</code> method from Present to return &#8220;content: xxx, recipient: yyy, cost: zzz&#8221;. A tip, you can access the parent method with super and just add cost to the returned string and return that.</p>
+
+<p>Create a new CompanyPresent variable in the code below. Give it the content &#8220;Icecream&#8221;, recipient &#8220;Lew&#8221; and cost <code>16</code>.</p>
+
+
+
+
+
+
+
+<hr>
+<code>3d7bb02eba6523a17df5a35ac2f6a1c1</code>
+
+</body>
+</html>

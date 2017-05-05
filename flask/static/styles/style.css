@@ -1,0 +1,80 @@
+html {
+    overflow-y: scroll;
+    background-color: #191919;
+    color: white;
+}
+
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: #191919;
+}
+
+li {
+    color: #e7e7e7;
+}
+
+h1 {
+    font-size: 3em;
+    border-bottom: 4px solid grey;
+    margin-bottom: 24px;
+    color: #e7e7e7;
+}
+
+h2 {
+    font-size: 2.25em;
+    border-bottom: 4px solid grey;
+    margin-bottom: 24px;
+    color: #e7e7e7;
+}
+
+h3, h4, h5, h6, p {
+    margin-bottom: 24px;
+    color: #e7e7e7;
+}
+
+label {
+    color: #e7e7e7;
+}
+
+.navbar {
+    background-color: green;
+}
+
+.box1 {
+    width: 25%;
+    float: left;
+}
+
+.box2 {
+    width: 75%;
+    float: left;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.text {
+    display: inline;
+    padding: 24px;
+}
+
+.profile {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.end-paragraf {
+    margin-bottom: 48px;
+}

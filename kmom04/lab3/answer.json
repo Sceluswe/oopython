@@ -1,0 +1,55 @@
+{
+    "details":  "Generated for emmd12 at 2017-02-22 13:03:01.",
+    "key":      "09b4916ed6147e4504d3d1c88d71f2f9",
+    "answers":  {
+        "1.1":		[
+    "can",
+    "can"
+],
+        "1.2":		[
+    "Droskkusken",
+    "Max",
+    "Fuxar"
+],
+        "1.3":		[
+    "123",
+    "563",
+    "726"
+],
+        "1.4":		[
+    "[kossor]",
+    "(blommor)",
+    "{skor}"
+],
+        "1.5":		"[('https', 'dbwebb.se', ''), ('ftp', 'bth.com', '32'), ('file', 'localhost', '8585'), ('http', 'v2-dbwebb.se', '')]",
+        "2.1":		[
+    "11:39 <+xt9> Kaffemetoden :)"
+],
+        "2.2":		[
+    "09:47 -!- feeloor_ [~felix@c-83-233-58-114.cust.bredband2.com] has joined #db-o-webb",
+    "09:49 -!- feeloor [~felix@c-83-233-58-114.cust.bredband2.com] has quit [Ping timeout: 240 seconds]",
+    "19:10 -!- feeloor_ [~felix@c-83-233-58-114.cust.bredband2.com] has quit [Ping timeout: 240 seconds]",
+    "19:11 -!- feeloor [~felix@c-83-233-58-114.cust.bredband2.com] has joined #db-o-webb"
+],
+        "2.3":		[
+    "23:00-01:30"
+],
+        "2.4":		[
+    "MollyPorph",
+    "xt9"
+],
+        "2.5":		[
+    "emil",
+    "mos"
+],
+        "2.6":		[
+    "rala14",
+    "saham-3"
+],
+        "3.1":		"I know H.T.M.L. How To Meet Ladies",
+        "3.2":		"123 abc 456 efg",
+        "3.3":		"Hello world!",
+        "3.4":		"print('hello world')",
+        "3.5":		"Contact\nName: Ross McFluff\nPhone number: 0456-45324\nAddress: 155 Elm Street\nContact\nName: Ronald Heathmore\nPhone number: 5543-23464\nAddress: 445 Finley Avenue"
+    }
+}

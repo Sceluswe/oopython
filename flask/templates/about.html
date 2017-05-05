@@ -1,0 +1,12 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="page-header">
+        <h1>Tekniker</h1>
+        <p>Jag heter {{ person.getName() }}, är {{ person.getAge() }} och bor i {{ person.getAdress() }}. Inom denna kurs arbetar jag i Python version 3 och hemsidan du nu läser körs lokalt med hjälp av flask. OS är Windows och Linux till och från, på Windows körs Cygwin och text editorn är Atom. Webbläsare är samtliga: Opera, Chrome, Firefox, Safari.</p>
+
+        <p>Samtidigt läser jag en kurs i Linux som introducerar grunderna i terminalen, hur man skapar och kör ett operativ system som Guest samt startar en Debian server. Slutligen använder vi även Node.js.</p>
+    </div>
+</div>
+
+{% include 'footer.html' %}

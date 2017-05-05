@@ -1,0 +1,21 @@
+{
+    "details":  "Generated for emmd12 at 2017-01-24 13:30:18.",
+    "key":      "7adb9ab377fc4a858832c70893858950",
+    "answers":  {
+        "1.1":		"My cats name is Basion and has blue eyes.",
+        "1.2":		9,
+        "1.3":		"My cats name is Basion, has blue eyes and 9 lives left to live.",
+        "1.4":		"My cats name is Basion, has blue eyes and 9 lives left to live.My dogs name is Lilly, has blue eyes and 1 lives left to live.",
+        "1.5":		true,
+        "1.6":		"All cats are evil!",
+        "1.7":		"Basion has 4 paws.",
+        "1.8":		"Basion has 3 paws but cats have 4 paws.",
+        "2.1":		"My cats name is Basion, has blue eyes and 9 lives left to live. My dogs name is Lilly, has blue eyes and 1 lives left to live.",
+        "2.2":		"Meow Meow",
+        "2.3":		"Chase!",
+        "3.1":		"Misty has 191 kr",
+        "3.2":		252,
+        "3.3":		"Misty has 252 kr",
+        "3.4":		"Misha has 318 kr"
+    }
+}

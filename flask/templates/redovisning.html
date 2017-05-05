@@ -1,0 +1,171 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="page-header">
+        <h1>{{ data.str_pageTitle }}</h1>
+        <p>Av Emil Mattsson</p>
+    </div>
+
+
+    <article>
+        <section>
+            <h2>Kmom01: Kom igång med objekt och Flask</h2>
+            <h3>Vilken utvecklingsmiljö använder du?</h3>
+            <p>OS är Windows 10, text editor är Atom, terminal: Cygwin och en Debian/Linux laptop som kör GNOME. Webbläsare är Opera, Chrome, Firefox och Safari, jag testar i allt.</p>
+
+            <h3>Var det några problem med att installera Flask?</h3>
+            <p>Inga problem. Jag följde instruktioner på hemsidan och använde min erfarenhet för att installera det på vanliga Windows terminalen, Cygwin och i GNOME-shell.</p>
+
+            <h3>Är du bekant med objekt och klasser sedan tidigare?</h3>
+            <p>Tidigare har jag programmerat i C++ och lärt mig om objekt och klassers användning. Utöver det har jag erfarenhet av Javascripts objektorientering. Objekt/klasser innehåller en specifik form av data (oftast privat/enkapsylerad) och funktionalitet som hjälper en att arbeta med den datan.</p>
+
+            <h3>Har du någon erfarenhet av Bootstrap sedan tidigare?</h3>
+            <p>Boostrap, twitters ramverk, har jag arbetat med på hemsidan FreeCodeCamp. Det gav mig en översikt av hur det fungerar och hur man kan dela upp hemsidan med hjälp av den, men repetition kommer behövas.</p>
+
+            <h3>Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?</h3>
+            <p>Kursmomentets storlek var lagom. Jag fick det material jag behövde för att kunna börja med labben direkt.  Labben gick igenom grundkoncepten och ökade kontinuerligt i svårighetsgrad per uppgift. Bra för nybörjare och som repetition.</p>
+
+            <h3>Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?</h3>
+            <p>Jag uppskattar videorna och föreläsningen mest. Man kommer lite närmare lärarna trots distansen. Att länka till dokumentationen i artiklarna är smart då det kommer vara viktigt att kunna läsa dem oavsett hur tekniska de är. Bra att kursen lyser upp detta.</p>
+
+            <p>Angående kurslitteraturen tror jag mig upptäckt ett dilemma. Det återkommer i nästan alla programmeringsböcker som jag läst. Dilemmat är ett överanvändande av metaforer. Förklaringen i kapitlet om arv och när det bör användas kändes för mig överkomplicerad och flummig, som om författaren själv sökte efter svaret. Han försökte förklara när man ska använda arv och föreslog klassikern ”is-a”. Att tänka i termer om ”är detta ett arv?” skapar ett onödigt filosofiskt problem. Om man introducerat objekt tidigare kan man anta att läsaren förstår objekts grundkoncept och gå rakt på sak istället:</p>
+
+            <p class="end-paragraf"><ol>
+                <li>Hur kan arv hjälpa mig?</li>
+                <li>(Visa exempel)</li>
+                <li>På vilka sätt begränsar arv mitt program?</li>
+                <li>(Vissa ett exempel som påvisar begränsningarna)</li>
+                <li>Slutfrågan: Ger arv mig den funktionalitet jag letar efter?</li>
+            </ol></p>
+
+            <h2>Reflektion</h2>
+            <h3>Erfarenheter och lärdomar</h3>
+            <p>I detta moment har jag lärt mig om hur Python hanterar objekt och klasser samt hur man kan använda sig av Flask för att starta upp en hemsida i lokal miljö. Den fungerar förvånansvärt snabbt när det gäller uppstart och uppdatering. </p>
+
+            <p>Jag blev förvånad att Python inte har privata variabler. Istället har det för första gången en svag ”lösning”. Lägg till _ framför variabeln som ska vara privat. Trots detta kan man göra vad man vill med den utanför scopet. Tidigare har Python varit strikt och sett till att så lite fel som möjligt kan förekomma. </p>
+
+            <h3>Problem och lösningar</h3>
+            <p>Först fungerade inte min CGI hemsida. Det stod ”Not Found”. Sedan informerade mos mig om att man behöver lägga till / i slutet på sin länk för att det ska fungera i Flask. Löst.</p>
+
+            <h3>Resultat</h3>
+            <p class="end-paragraf">En introduktion till Pythons sätt att hantera objekt, repetition inom objekt-orientering (grundkoncepten) och hur man använder flask resulterade i en simpel hemsida men ännu simplare objekt-orienterad kod. Allt som allt ett bra kursmoment som oftast gick rakt på sak. Lite av den problematik jag ser i kurslitteraturens förklaringar finns tyvärr med i kursmomenten, men det är nedtonat (uppskattas).</p>
+
+            <h2>Kmom02: UML och unittest</h2>
+            <h3>Är du bekant med UML sedan tidigare?</h3>
+            <p>Jag har arbetat med UML tidigare i ett eget spelprojekt tillsammans med 2 andra. Det har varit väldigt simpelt och inte hållit strikt på hur aggregation, komposition och association ska se ut. Den UML:en var till för att få en översikt av samtliga klasser, samt hur de hänger ihop rent generellt. Målet blev därför att sträcka på sig och göra det mer specifikt, vilket jag gjorde i extra uppgiften. Mer om det senare.</p>
+
+            <ul>
+                <li>Bi-directional Association: Klasser som är medvetna om varandra.</li>
+                <li>Uni-directonal Association: Endast en klass känner till den andra klassen.</li>
+                <li>Aggregation: Båda klasser kan existera utan varandra men ägande klassen förlorar funktionalitet. Ägande kan ha flera objekt av den ägda, men varje ägt objekt kan endast vara ägt av en eller ingen.</li>
+                <li>Komposition: Den ägande klassen kan äga hur många den vill, eller ingen, men den ägda klassen kan inte finnas utan sin ägare.</li>
+                <li>Arv: Ett objekt kan ärva all funktionalitet ifrån en eller flera ”föräldrar” (ett annat objekt).</li>
+            </ul>
+
+            <h3>Är du bekant med unittester sedan tidigare?</h3>
+            <p>Jag har tidigare gjort unittester med hjälp av Travis i PHP. Därför sträckte jag på mig igenom att skapa fler tester än vad uppgiften efterfrågade och jag gick in mer på djupet med testerna. Till exempel jämförde jag listorna efter att kort flyttats om (shuffle), såg till så alla kort har rätt attribut efter skapning och ändring så att inget index någonsin är None i listan. Det skulle kunna ske om någon tar över min kod, eftersom index 0 i listan ”names” innehåller värdet None (detta för att värdet på ett kort ska kunna användas som index i listan).</p>
+
+            <h3>Vad gjorde du för uppdatering på me-sidan?</h3>
+            <p>Det blev få ändringar på me-sidan, fokus var UML, arv och sekvensdiagram i detta moment. Sidan fick en mörkare färg och jag försökte dessutom ändra färg i navbaren, men oavsett vad jag provade även (!important och inline stil) så gjorde det ingen skillnad. Färgen förblev svart med grå/vit text.</p>
+
+            <h3>Kan du se nyttan med UML och tester inom ramen för ett projekt?</h3>
+            <p>Absolut. UML är ett viktigt verktyg för att flera personer, eller nya personer ska kunna komma in i projektet, förstå det översiktligt och börja arbeta. Det är helt enkelt en visuell genomgång av den kod som finns. Dessutom kan man med lite erfarenhet spara tid igenom att skapa sin klass i en UML innan man börjar koda. Med en tydlig bild av koden kodar man oftast snabbare och får en chans att undvika buggar som dyker upp när saker inte helt passar ihop (ett större problem när man är fler).</p>
+
+            <p>Enhets testning är livsviktigt. De blir ett extra skydd emot buggar och de ovannämnda problemen. Det fick jag bevisat för mig även i detta moment. Jag hade glömt att tömma listan med kort i min Deck klass reset metod. Problemet upptäckte testerna och de rapporterade att det fanns 104 kort istället för 52 efter att en reset skett.</p>
+
+            <h3>Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?</h3>
+            <p>Kursmomentet kändes stort men det gick ändå att ta sig igenom på två dagar trots trötthet. Det var mycket information i form av läsning men dessa kompletterades och underlättades av videor som tog upp samma sak.</p>
+
+            <h3>Gjorde du extrauppgiften?</h3>
+            <p>Jag extrauppgiften i ”Skapa objekt efter UML-diagram” så att Hand ärver ifrån Deck och Hand blev då helt tom förutom konstruktorn. Föräldern Deck fyller listan cards med 52 kort. Eftersom en hand  ska vara tom ifrån början sätter jag cards listan till tom i Hands konstruktor. Takecard funktionen i Hand som skiljer sig ifrån den i Deck tänkte jag först överladda i Deck, så att båda alternativen fanns kvar. Men Python har ingen överladdning på grund av duck-typing och att varje funktion i en klass är sitt egna attribut. Därför kombinerade jag de båda metodernas funktionalitet. Metoden tar nu en deck som argument, plockar ett kort ifrån den, sparar i sin egen cards lista och returnerar även det objekt som sparats (samt plockats bort ur deck argumentet).</p>
+
+            <p>UML extrauppgiften gjorde jag också och jag tror att jag har koll på begreppen nu. I uppgiften gjorde jag godtyckliga antaganden om vilka typer för variabler och parametrar. Det var synd att det inte fanns med något arv eller privata variabler, men uppgiften tillät mig att öva läsning av UML:er. Till exempel så tillhör siffrorna vid pilen klassen som har stjärnan och siffrorna vid stjärnan tillhör klassen som pilen pekar på.</p>
+
+            <h3>Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?</h3>
+            <p>Videon om sekvensdiagram uppskattade jag mest. Den förklarade konceptet så enkelt att jag förstod det direkt. Jag skapade mitt diagram endast med hjälp av den videon och bilderna i mos artikel. Utöver det googlade jag även hur det skulle se ut när ett objekt kallar på sin egen funktion. </p>
+            <p>Mos artikel om UML var utförlig och förklarande. Jag ser fortfarande ett problem med metaforer, men det kan jag nu lägga åt sidan, bilderna hjälpte mest av allt och förklaringarna om komposition och aggregation hjälpte mig att skilja på dem. Komposition används när objekten inte kan existera utan varandra. I aggregation kan de existera utan varandra men förlorar funktionalitet.</p>
+
+            <h2>Reflektion</h2>
+            <h3>Erfarenheter och lärdomar</h3>
+            <p>En generell grej jag lärt mig om enhetstestning är att det oftast är bäst att använda lokala variabler. På så sätt blir det inga problem mellan de olika test funktionerna. När jag gjorde en ändring i ett objekt som tillhörde klassen TestCase så invaliderade det ett tidigare test. Om man inte är uppmärksam kan det leda till onödig felsökning. Jag kör lokala test exempel i framtiden eller iallafall till de flesta metoder.</p>
+
+            <h3>Problem och lösningar</h3>
+            <p>Det var inga problem med kodandet. Det flöt på fram tills sekvensdiagrammet. Hemsidan draw.io kunde inte alltid spara det jag gjort och det hände att jag fick börja om. </p>
+
+            <p>Jag kunde inte hitta en testfunktion som loopade igenom listor för att se till att allting var likadant och == operatorn sa att de inte var samma eftersom den jämför list-objekt och inte innehåll. Lösningen blev en egen loop som kollade varje objekt med assertEquals.</p>
+
+            <h3>Resultat</h3>
+            <p class="end-paragraf">Det blev mycket text denna gång trots nedkortningar, men det reflekterar även kursmomentet bra eftersom det var en del att göra. All läsningar samt övningarna kändes stora till en början och jag var slut i huvudet efter all information. Trots att jag prioriterade bort ett par sidor i boken och artiklarna och la fokus på videor så hann jag klart och kunde slutföra samtliga uppgifter. Momentet har gett mig träning i hur man kan planera ett projekt, hålla koll på komplicerade sekvenser med diagram och hur planering innan kodning kan reducera spenderad tid.</p>
+
+            <h2>Kmom03: Autogenerering av UML och dokumentation</h2>
+            <h3>Vad tyckte du om Jinja2?</h3>
+            <p>Jinja 2 är ett användbart verktyg eftersom det underlättar skapandet av hemsidor ungefär som PHP gör. Däremot föredrar jag hur min editor reagerar på PHP framför Jinja2 (den färglägger inte när jag använder Jinja2).</p>
+            <h3>Vad tyckte du om strukturen på Flask-appen?</h3>
+            <p>Strukturen  är lättförståelig och det känns mindre komplicerat än i phpmvc kursen. Med endast lite kunskap om strukturen och ramverket Flask kan man komma igång snabbare med sin hemsida än om man endast använder apache. I kombination med Jinja2 så kan jag tänka mig att det är likvärdigt med andra PHP ramverk som jag stött på tidigare.</p>
+            <h3>Gick det bra med autogenereringen?</h3>
+            <p>Inga problem med autogenereringen. Användandet av kommandon och paket börjar blir vardagsmat nu. Jag körde kommandona och fick fram min UML och min dokumentation.</p>
+            <h3>Gjorde du någon extrauppgift på Black Jacken?</h3>
+            <p>Jag gjorde en del på första extrauppiften. Ess kan räknas som 11 om man även har en 10. Det vill säga: man kan få Blackjack. I andra tillfällen är Ess alltid 1.</p>
+            <p>För att lösa blackjack uppgiften och extra uppgift 2 använde jag mig av multipla arv. Någonting man bör hålla sig undan ifrån men i detta ögonblick var det helt enkelt rätt. En spelare är inte annat än sin hand, sin insats och ett namn i ett blackjack spel. Därför ärver min Player klass ifrån Hand och lägger till funktionaliteten för namn samt insats. En spelare kan satsa pengar och om den vinner så vinner den hela potten. Andra spelare får antingen bjuda lika mycket eller stanna där de är.</p>
+            <p>Uppgift 6 har jag löst indirekt. Jag har inget Dealer-objekt. En Dealer är inte annat än bankens spelare vid bordet och därför blev även han ett objekt av klassen Player. Blackjack klassen håller koll på alla spelare som spelar spelet och vilka regler som de måste följa.</p>
+            <h3>Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?</h3>
+            <p>Kursmomentet kändes litet efter tidigare kursmoment samt Linux kursmoment 03, dessa innehöll mycket läsa och än mer jobba. Inget fel med det men detta kändes som en välbehövlig paus efter många dagar av kodande.</p>
+            <h3>Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?</h3>
+            <p>Det blir svårt att vara annat än de övningar som fanns med i uppgiften, men överlag föredrar jag videor och praktiska övningar (labbar med mera) framför lång läsning av böcker.</p>
+
+            <h2>Reflektion</h2>
+            <h3>Erfarenheter och lärdomar</h3>
+            <p>Jag har lärt mig att jag bäst lär mig programmering igenom att arbeta praktiskt med den praktiskt, helst samtidigt som jag läser. Om jag endast läser försvinner snart informationen. Repetition är bäst.</p>
+
+            <h3>Problem och lösningar</h3>
+            <p>Gjorde ett mindre misstag där jag kollade längden på antalet spelare som användaren vill ha, men glömde konvertera om till en integer istället för en sträng. Resultatet blev 1 spelare istället för X.
+            </p>
+
+            <h3>Resultats</h3>
+            <p class="end-paragraf">Jag fick öva mig i Pythons sätt att hantera objekt-orientering och dessutom fick jag använda multipla arv. Att skriva funktioner, klasser och att tänka i klassdiagram har jag upptäckt börjar bli en vana. En bra vana, då det oftast går snabbare om man har ett färdigt ramverk (eller en plan) att arbeta utifrån, något som Flask bevisat i detta moment.</p>
+
+            <h2>Kmom04: Regex och databaser</h2>
+
+            <h3>Gjorde du extrauppgiften?</h3>
+            <p>I brist på tid valde jag att inte göra extrauppgiften.</p>
+
+            <h3>Var det svårt att komma igång med regex?</h3>
+            <p>Listan i övningen innehållande regex olika konstruktioner hjälpte mig att komma igång och fungerade som stöd igenom labben. Det som tog längst tid att lära sig var hur man tar bort ”newline” karaktärer. Jag tänkte mig att det borde finnas något sätt att enkelt filtrera ut \n men oavsett vad jag provade så fungerade det inte. Istället gjorde jag så att min regex plockade ut en special karaktär följt av ett ”n” som direkt följdes av en exakt likadan specialkaraktär och ett ”n”. Därmed löste jag problemet. Hemsidan regex101 var till stor hjälp i mitt lärande eftersom den tillät mig att få direkt feedback när jag gjorde en ändring.</p>
+
+            <h3>Kan du se nyttan och kraften med regex?</h3>
+            <p>Att filtrera text med hjälp av regex kan jag se som ett utomordentligt verktyg när jag vill filtrera loggarna på min Debian server eller när jag vill leta igenom en textfil. Jag skulle även kunna tänka mig att använda det när jag läser in inställningar ifrån config filer till mina egna projekt.</p>
+
+            <h3>Var det svårt att komma igång med SQLAlchemy?</h3>
+            <p>SQLAlchemy var enkelt att sätta sig in i tack vare övningen och för att slutföra uppgiften skapade jag min egen databasmodell som är baserad på CRUD. Den kallas dbQuery och dess funktioner använder sig av klasser som mappats emot tabeller, dessutom startar den en Session till en databas. Namn och väg till databasen anger man i dess konstruktor. DbQuery kan jag återanvända i alla mina kommande flask projekt då den endast innehåller 4 generella funktioner: create, read, update och delete. För att gömma undan dbQuery funktionalitet ifrån användare till mina farm tabeller skapade jag en klass vid namn Farm som innehåller ett privat dbQuery objekt (komposition). Farm använder dbQuery objektet i sina funktioner och tillåter användare att hantera de tre farm tabellerna; ta bort, lägga till och visa innehåll.</p>
+
+            <h3>Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?</h3>
+            <p>Kursmomentet kändes lagom i storlek. Det som drog ut på tiden var problem utanför studierna som jag inte själv har någon kontroll över.</p>
+
+            <h3>Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?</h3>
+            <p>Övningarna uppskattade jag mest. De gav mig en enkel och fokuserad guide till hur man kan utföra uppgifterna, vilket sparar tid när man har ont om den.</p>
+            <h2>Reflektion</h2>
+            <h3>Erfarenheter och lärdomar</h3>
+            <p>Till nästa gång har jag med mig lärdomen att jag borde gjort som i övningen och skapat html formen (kanske även tabellen) direkt i funktionen i Farm klassen. Mitt mål var att hålla HTML kod i html filerna och Python kod i Python filerna. Detta lyckades jag med men i efterhand vet jag nu att jag kunde använt mig av mindre datastrukturer (det blev en del listor och tupler) och där med gjort koden mer lättförståelig om jag nöjt mig med en sträng med html kod istället. Dessutom hade det varit lättare att göra ändringar i html koden om till exempel ett input element skilde sig ifrån ett annat, eller om ett annat element behövdes istället för input.</p>
+
+            <h3>Problem och lösningar</h3>
+            <p>Ett problem jag hade var gällande POST i SQLAlchemy. Det går inte att hantera en GET och en POST samtidigt inom samma if-sats eftersom variabeln request.method innehåller antingen eller och inte både och. Jag löste problemet igenom att skapa 3 olika routes, en för varje tabell där en get och post request görs för just den tabellen. Ett annat alternativ hade varit att skapa en funktion som avgör vilken tabell som används, antingen igenom att jag skapar en GET som talar om vilken som är aktiv, eller att jag sparar namnet på den aktiva tabellen i min Farm-klass och avgöra utifrån den.</p>
+
+            <h3>Resultat</h3>
+            <p class="end-paragraf">Jag har fått lära mig hur man hanterar GET och POST i flask och även sträcka lite på kunskaperna igenom att bygga upp min egen databasmodell/klass som använder sig av CRUD för att prata med databasen. Dessutom fick jag äntligen lära mig regex, någonting jag försökt och haft som mål under lång tid. Allt som allt nöjd. Momentet var praktiskt och gav tillräckligt med övning för att jag ska känna att jag har koll på delmomenten.</p>
+
+            <h2>Kmom05: Sorteringsalgoritmer och datastrukturer</h2>
+            <h3>Rubrik</h3>
+            <p class="end-paragraf">Text</p>
+
+            <h2>Kmom06: Bokningssystem</h2>
+            <h3>Rubrik</h3>
+            <p class="end-paragraf">Text</p>
+
+            <h2>Kmom10: Projekt och examination</h2>
+            <h3>Rubrik</h3>
+            <p class="end-paragraf">Text</p>
+        </section>
+    </article>
+</div>
+
+{% include 'footer.html' %}

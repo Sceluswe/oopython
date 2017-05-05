@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 3 - oopython</title>
+<style>
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+<pre>
+09b4916ed6147e4504d3d1c88d71f2f9
+oopython
+lab3
+emmd12
+2017-02-22 13:03:01
+v2.2.30 (2017-02-14)
+</pre>
+
+<p><i>Generated 2017-02-22 14:03:02 by <a href="https://github.com/mosbth/lab">dbwebb lab-utility</a> v2.2.30 (2017-02-14).</i></p>
+<hr>
+
+<h1>Lab 3 - oopython</h1>
+<p>If you need to peek at examples or just want to know more, take a look at the page: https://docs.python.org/3/howto/regex.html. Here you will find everything this lab will go through and much more.</p>
+
+
+<h2>1. Regular expressions</h2>
+<p>The lab consists of three sections. In section one you will practice regex on strings. In section two you will practice regex on the content from a file, the irc log. In section three you will practice on replacing text in strings.
+In section two, use your patterns on the variable <code>IRCLOG</code>.</p>
+
+<p>Use double backslashes (<code>\</code>) or raw string notation to avoid validation errors.</p>
+
+<p>Answer with the result from the re functions unless specified differently in the assignment.</p>
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Write a pattern that matches the word <code>can</code> in the sentence<br />
+&#8216;how can a clam cram in a clean cream can?&#8217;.</p>
+
+<p>Use the re modules findall function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Write a pattern that only matches the words that start with a <em>big letter</em> in the sentence<br />
+&#8216;Droskkusken Max kuskar med Fuxar och fuskar med droskkusktaxan.&#8217;.</p>
+
+<p>Use the re modules findall function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Write a pattern that only matches the <code>digits</code> in the string<br />
+&#8216;hej123ko whatup&#8221;563&#8221; koll726kolla&#8217;.</p>
+
+<p>Use the re modules findall function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Write a pattern that matches the characters <code>()[] and {}</code> and <code>the words inside</code>, in the string<br />
+&#8216;[kossor],(blommor),{skor},kossor,blommor,skor&#8217;.</p>
+
+<p>Use the re modules findall function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (2 points)</h3>
+<p>Write a pattern that matches the scheme, the host and the port(if present) from the urls in the string<br />
+&#8216;https://dbwebb.se/kunskap/uml#sequence, ftp://bth.com:32/files/im.jpeg, file://localhost:8585/zipit, http://v2-dbwebb.se/do%hack&#8217;.</p>
+
+<p>A tip, create a group for each element. From the first url we want https and dbwebb.se from the second url we want ftp, bth.com and 32 and so on.</p>
+
+<p>Use the re modules findall function. Convert the result to a string and answer with it.</p>
+
+
+
+
+
+
+
+<h2>2. Regex on content from a file</h2>
+<p>Use the re modules findall function with the variable <code>IRCLOG</code>.</p>
+
+
+<h3>Exercise 2.1 (1 points)</h3>
+<p>Find the whole line where someone talks about <code>Kaffe</code>.</p>
+
+<p>Answer with the whole line.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2 (1 points)</h3>
+<p>Find all the lines where <code>feeloor</code> joins or quits.</p>
+
+<p>Answer with all the lines.</p>
+
+
+
+
+
+
+<h3>Exercise 2.3 (2 points)</h3>
+<p>At what time interval did <code>Trekka12</code> have a <code>genombrott</code> with his <code>snakespel</code>?</p>
+
+<p>Answer with the time interval.</p>
+
+
+
+
+
+
+<h3>Exercise 2.4 (1 points)</h3>
+<p>Find the two users who talk to <code>eline</code> about <code>git</code>/<code>Git</code>.</p>
+
+<p>Answer with the two usernames.</p>
+
+
+
+
+
+
+<h3>Exercise 2.5 (2 points)</h3>
+<p>Find all the users who talk about themselves.</p>
+
+<p>Tip, create a group and reference to it.
+Answer with the usernames.</p>
+
+
+
+
+
+
+<h3>Exercise 2.6 (2 points)</h3>
+<p>Find the users who have atleast one digit in their name and have made a forum post in the category <code>oophp</code>.</p>
+
+<p>Tip, marvin says when someone makes a forum post.
+Answer with the usernames.</p>
+
+
+
+
+
+
+
+<h2>3. Search and replace</h2>
+<p>Use the re modules sub function for all the exercises.</p>
+
+
+<h3>Exercise 3.1 (1 points)</h3>
+<p>Use the sub function to fix the whitespaces in the sentence<br />
+&#8216;I  know          H.T.M.L.  How To      Meet Ladies&#8217;.</p>
+
+<p>One space between each word.</p>
+
+
+
+
+
+
+<h3>Exercise 3.2 (1 points)</h3>
+<p>Use the sub function to switch the place of the numbers and letters in the string<br />
+&#8216;abc123 efg456&#8217;<br />
+and also add a space between them, so it becomes &#8216;123 abc 456 efg&#8217;</p>
+
+
+
+
+
+
+<h3>Exercise 3.3 (1 points)</h3>
+<p>Use the sub function to remove the last three characters from the string<br />
+&#8216;Hello world!-.1&#8217;.</p>
+
+
+
+
+
+
+<h3>Exercise 3.4 (1 points)</h3>
+<p>Use the sub function to remove the commented and the empty line from the string<br />
+&#8220;#Did you back up the system?\n\nprint(&#8216;hello world&#8217;)&#8221;.</p>
+
+
+
+
+
+
+<h3>Exercise 3.5 (3 points)</h3>
+<p>Use the sub function to format the string<br />
+&#8216;Ross McFluff: 0456-45324: 155 Elm Street\nRonald Heathmore: 5543-23464: 445 Finley Avenue&#8217;.<br />
+For each person it should look like this:<br />
+&#8216;Contact
+Name: xx yy
+Phone number: 0000-00000
+Address: 000 zzz zzz&#8217;.</p>
+
+
+
+
+
+
+
+<hr>
+<code>09b4916ed6147e4504d3d1c88d71f2f9</code>
+
+</body>
+</html>

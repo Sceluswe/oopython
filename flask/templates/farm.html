@@ -1,0 +1,68 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="row">
+        <div class="page-header">
+            <h1>{{ data.str_pageTitle }}</h1>
+        </div>
+
+        <div class="box1">
+            <ul>
+                <li>
+                    <a href="{{ url_for('farmAnimals') }}">
+                        <h3>Animals</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('farmHumans') }}">
+                        <h3>Humans</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('farmVehicles') }}">
+                        <h3>Vehicles</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="box2">
+        <form class="form-horizontal" role="form" method="POST" action="{{ request.base_url }}">
+        <div class="form-group form-group-sm">
+            {% for item in farm.form %}
+                <div class="col-sm-4">
+                    <label for="{{ item.name }}">{{ item.name }}:</label>
+                    <input type="{{ item.type }}" name="{{ item.name }}" class="form-control" {%- if item.alt != None %} {{ item.alt|safe }} {% endif %}/>
+                </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-default">Lägg till</button>
+        </form>
+
+        <br>
+
+            <table class="table table-inverse">
+            <thead>
+                <tr>
+                    {% for item in farm.headers %}
+                        <th><p>{{ item }}</p></th>
+                    {% endfor %}
+                    <th><p>Actions</p></th>
+                </tr>
+            </thead>
+                {% for row in farm.rows %}
+                    <tr>
+                    {% for column in row %}
+                        <td><p>{{ column }}</p></td>
+                    {% endfor %}
+                        <td><a href="?del={{ row[0] }}">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}
